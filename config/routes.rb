@@ -1,5 +1,11 @@
 BetaNyc::Application.routes.draw do
-  get "static_pages/home"
+  root to: 'static_pages#home'
+
+  match "about" => "static_pages#about"
+  match "mission" => "static_pages#mission"
+  match "projects" => "static_pages#projects"
+  match "events" => "static_pages#events"
+  match "volunteer" => "static_pages#volunteer"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

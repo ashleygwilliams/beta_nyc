@@ -1,11 +1,21 @@
-.container-fluid
-  .logo.pull-left
-    %h1 betaNYC
-    =image_tag "logo.png"
-  .mission
-    %h2 beta NYC cares about open gov
-    %ul
-      %li we code about it
-      %li we write about it
-      %li we get together and talk about it
-    %h2 you should join us
+.hero
+  .row-fluid
+    .logo.span4
+      =image_tag "beta.png"
+      %h1 betaNYC
+    .mission.span8
+      %h2 betaNYC cares about open gov
+      %hr
+      %ul
+        %li we <strong>code</strong> about it
+        %li we <strong>write</strong> about it
+        %li we <strong>get together and talk</strong> about it
+      %hr
+      %h2 you should join us
+
+%section
+  .row-fluid
+    .spotlight.column.span8
+      %h1 project spotlight: <span>policy compass</span>
+    .contact.column.span4
+      %h1 keep in touch

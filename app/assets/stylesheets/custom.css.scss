@@ -5,3 +5,135 @@ $CFAblue: #399fd3;
 $CFAgrey: #939699;
 $CFAdarkgrey: #6D6E71;
 
+$tinyspace: 2px;
+$smallspace: 5px;
+$mediumspace: 10px;
+$largespace: 20px;
+$hugespace: 40px;
+
+.logo > h1 {
+  margin-left: -9999px;
+  margin-top: -50px;
+}
+
+.mission {
+  padding: $largespace;
+}
+
+.logo {
+  background: $CFAblue;
+}
+
+h2 {
+  font-size: 50px;
+  font-style: none;
+  font-weight: 900;
+}
+
+li {
+  list-style-type: none;
+  font-size: 40px;
+  line-height: 1.5em;
+}
+
+.column {
+  background: white;
+  border: $largespace $CFAgrey solid;
+  margin-top: $largespace;
+  padding: $largespace;
+  &.spotlight {
+    border-color: $CFAred;
+    & span {
+      font-weight: 900;
+    }
+  }
+  &.contact {
+    border-color: $CFAblue;
+  }
+  h1 {
+    font-family: "Ostrich sans";
+  }
+}
+
+.navbar .nav,
+.navbar .nav > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+    font-family: "Ostrich sans";
+    font-size: 25px;
+    margin-left: $largespace;
+    margin-right: $largespace;
+}
+
+.navbar-inner {
+  text-align:center;
+  border: none;
+  padding: $smallspace;
+  background: white;
+}
+
+header {
+  text-align: right;
+}
+
+body {
+  background-image: image-url("bg_stripe.png");
+  font-family: "Ostrich Sans";
+}
+
+.hero {
+  background: white;
+  border: $largespace $CFAgrey solid;
+}
+
+.stripes {
+  float: left;
+}
+
+.stripes > div {
+  padding: $mediumspace;
+  display: inline;
+  vertical-align: middle;
+}
+
+.blue {
+  background: $CFAblue;
+}
+
+.red {
+  background: $CFAred;
+}
+
+.grey {
+  background: $CFAgrey;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
