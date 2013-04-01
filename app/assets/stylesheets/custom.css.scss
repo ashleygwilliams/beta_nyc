@@ -87,6 +87,12 @@ body {
 .hero {
   background: white;
   border: $largespace $CFAgrey solid;
+  font-family: "Ostrich Sans";
+  font-size: 30px;
+  ul > li {
+    font-family: "Ostrich Sans";
+    font-size: 30px;
+  }
 }
 
 .stripes {
