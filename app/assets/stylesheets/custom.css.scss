@@ -16,8 +16,13 @@ $hugespace: 40px;
   margin-top: -50px;
 }
 
-.mission {
+.explain {
   padding: $largespace;
+}
+
+.explain > h1 {
+  font-size: 80px;
+  font-weight: 900;
 }
 
 .logo {
@@ -84,7 +89,7 @@ body {
   font-family: "Ostrich Sans";
 }
 
-.hero {
+.main {
   background: white;
   border: $largespace $CFAgrey solid;
   font-family: "Ostrich Sans";
