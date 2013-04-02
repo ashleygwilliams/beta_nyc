@@ -1,11 +1,5 @@
 = form_for @user, {:html=>{:class=>"form-horizontal"}} do |f|
-  - if @user.errors.any?
-    #error_explanation
-      %h2 #{pluralize(@user.errors.count, "error")} prohibited this user from being saved:
-      %ul
-        - @user.errors.full_messages.each do |msg|
-          %li #{msg}
-
+  = render 'shared/error_messages'
   .field.control-group
     .control-label
       = f.label :name
@@ -27,6 +21,16 @@
     .controls
       = f.text_field :cellphone
   %hr/
+  .field.control-group
+    .control-label
+      = f.label :password
+    .controls
+      = f.password_field :password
+  .field.control-group
+    .control-label
+      = f.label :password_confirmation
+    .controls
+      = f.password_field :password_confirmation
   .action.control-group
     .controls
-      = f.submit "Submit", {:class=>"btn btn-primary"}
+      = f.submit "Submit", {:class=>"btn btn-primary btn-large"}

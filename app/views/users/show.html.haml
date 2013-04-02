@@ -1,0 +1,11 @@
+%p#notice
+  = notice
+.row-fluid
+  %aside.span4
+    %section
+      = gravatar_for @user
+      %h1 #{@user.name}
+      %h4 #{@user.email}
+      %h4 #{@user.githandle}
+      %h4 #{@user.cellphone}
+    = link_to 'Edit', edit_user_path(@user), {:class => "btn"} 

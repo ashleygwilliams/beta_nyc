@@ -7,9 +7,13 @@
     = csrf_meta_tags
   %body
     .container-fluid
+      - flash.each do |key, value|
+        .alert{:class=>"alert-#{key}"}
+          #{value}
       %header
         = render "shared/social"
       =render "shared/nav"
       =yield
       %footer
         = render "shared/social"
+      = debug(params) if Rails.env.development?

@@ -8,6 +8,7 @@ BetaNyc::Application.routes.draw do
   match "projects" => "static_pages#projects"
   match "events" => "static_pages#events"
   match "volunteer" => "users#new"
+  match 'signup'  => 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
