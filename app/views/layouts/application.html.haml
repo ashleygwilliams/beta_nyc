@@ -8,8 +8,7 @@
   %body
     .container-fluid
       - flash.each do |key, value|
-        .alert{:class=>"alert-#{key}"}
-          #{value}
+        = content_tag(:div, value, class: "alert alert-#{key}")
       %header
         = render "shared/social"
       =render "shared/nav"
