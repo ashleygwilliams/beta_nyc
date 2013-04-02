@@ -1,0 +1,8 @@
+.main
+  %h1 #{@project.name}
+  %a{:href=>"#{@project.url}"} website
+  %p #{@project.description}
+  = link_to 'Edit', edit_project_path(@project), {:class=>"btn"}
+  %p Contact
+  = gravatar_for @user
+  = link_to @user.name, @user, {:class=>"user"}

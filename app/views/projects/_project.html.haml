@@ -1,0 +1,5 @@
+%li
+  %h1 #{project.name}
+  = link_to "Edit Project", edit_project_path(project), {:class=>"btn"}
+  %p #{project.description}
+  %span.timestamp Created on #{project.created_at}

@@ -1,9 +1,14 @@
-.row-fluid
+.main.row-fluid
   %aside.span4
-    %section
-      = gravatar_for @user
-      %h1 #{@user.name}
-      %h4 #{@user.email}
-      %h4 #{@user.githandle}
-      %h4 #{@user.cellphone}
+    = gravatar_for @user
+    %h1 #{@user.name}
+    %h4 #{@user.email}
+    %h4 #{@user.githandle}
+    %h4 #{@user.cellphone}
     = link_to 'Edit', edit_user_path(@user), {:class => "btn"} 
+  .span8
+    -if @user.projects.any?
+      %h3 Projects (#{@user.projects.count})
+      %ol.projects
+        = render @projects
+      = will_paginate @projects
