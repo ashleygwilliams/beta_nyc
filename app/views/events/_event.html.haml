@@ -1,0 +1,7 @@
+%li
+  %h1 #{event.name}
+  = link_to "Edit Event", edit_event_path(event), {:class=>"btn"}
+  %span.when #{event.when}
+  %span.location #{event.location}
+  = link_to "RSVP on Meetup.com", event.meetup_url, {:target=>"_blank"}
+  %p #{event.description}

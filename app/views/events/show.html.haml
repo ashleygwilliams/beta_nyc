@@ -1,0 +1,12 @@
+.main
+  %h1 #{@event.name}
+  = link_to "RSVP on Meetup.com", @event.meetup_url, {:target=>"_blank"}
+  %h2 Location: #{@event.location}
+  %h2 #{@event.when}
+
+  %h2 Contact: User #{@event.user_id}
+
+  %p #{@event.description}
+
+  = link_to 'Edit', edit_event_path(@event), {:class=>"btn"}
+
