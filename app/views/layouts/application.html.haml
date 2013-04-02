@@ -7,12 +7,12 @@
     = csrf_meta_tags
   %body
     .container-fluid
-      - flash.each do |key, value|
-        = content_tag(:div, value, class: "alert alert-#{key}")
       %header
         = render "shared/social"
         = render "shared/session"
       =render "shared/nav"
+      - flash.each do |key, value|
+        = content_tag(:div, value, class: "alert alert-#{key}")
       =yield
       %footer
         = render "shared/social"
