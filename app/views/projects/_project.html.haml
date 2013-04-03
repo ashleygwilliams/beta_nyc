@@ -1,5 +1,11 @@
+%hr
 %li
-  %h1 #{project.name}
-  = link_to "Edit Project", edit_project_path(project), {:class=>"btn"}
+  = link_to project.name, project
+  -if current_user?(project.user)
+    .options
+      =link_to "delete", project, method: :delete,
+                                data: { confirm: "Are you sure?" },
+                                title: project.name
+      |
+      =link_to "edit", edit_project_path(project)
   %p #{project.description}
-  %span.timestamp Created on #{project.created_at}
