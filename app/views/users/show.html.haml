@@ -6,6 +6,9 @@
     %h4 #{@user.githandle}
     %h4 #{@user.cellphone}
     = link_to 'Edit', edit_user_path(@user), {:class => "btn"} 
+    %section
+      = link_to "Create a New Project", new_project_path, {:class=>"btn btn-primary"}
+      = link_to "Create a New Event", new_event_path, {:class=>"btn btn-primary"}
   .span8
     %section.events
       -if @user.events.any?

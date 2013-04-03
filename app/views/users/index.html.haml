@@ -1,8 +1,18 @@
-%h1 Beta Brigade
+.main
+  .row-fluid
+    .explain.span8
+      %h1 Beta Brigade
+      %p People need to hear what I have to say. I believe we will elect a new President in 2012. It is tragic what we do in the poorest neighborhoods. Kill jobs and lead to a recession, force people off of work and onto unemployment and will actually increase the deficit. We exercise a no-fly zone this evening.
+      %p People need to hear what I have to say. People need to hear what I have to say. But for the momoment it's a bit like watching American Idol. We have the newest guest star. People need to hear what I have to say. Nuts. A drug addict.
+      = link_to "Join Now!", signup_path, {:class=>"btn btn-primary btn-large"}
+    .span4
+      =image_tag "betabrigade.jpg"
+.main
+  %h1 Members
 
-= will_paginate
+  = will_paginate
 
-%ul.users
-  = render @users
+  %ul.users
+    = render @users
 
-= will_paginate
+  = will_paginate

@@ -1,0 +1,20 @@
+= form_for(@project) do |f| 
+  = render 'shared/error_messages', object: f.object
+  .field.control-group
+    .control-label
+      = f.label :name
+    .controls
+      = f.text_field :name
+  .field.control-group
+    .control-label
+      = f.label :description
+    .controls
+      = f.text_area :description
+  .field.control-group
+    .control-label
+      = f.label :url
+    .controls
+      = f.text_field :url
+  .action.control-group
+    .controls
+      = f.submit "Submit", {:class=>"btn btn-primary btn-large"}

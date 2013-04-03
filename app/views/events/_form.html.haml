@@ -1,5 +1,5 @@
 = form_for @event, {:html=>{:class=>"form-horizontal"}} do |f|
-  //= render 'shared/error_messages'
+  = render 'shared/error_messages', object: f.object
   .field.control-group
     .control-label
       = f.label :name
