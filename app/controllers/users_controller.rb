@@ -49,6 +49,9 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        # Tell the UserMailer to send a welcome Email after save
+        UserMailer.welcome_email(@user).deliver
+        
         sign_in @user
         format.html { redirect_to @user, notice: 'Welcome to the Beta Brigade!' }
         format.json { render json: @user, status: :created, location: @user }

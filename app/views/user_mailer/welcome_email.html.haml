@@ -1,0 +1,20 @@
+!!! 5
+%html
+	%head
+	%body
+		%h1 Howdy Soldier!
+		%p You have successfully signed up for BetaNYC's volunteer corps, Beta Brigade. Your username is your email address, #{@user.email}
+		%br/
+		%p To login to the site, just follow this link: #{@url}
+		%p Get started:
+		%ul
+			%li
+				=link_to "RSVP to one of our events", "http://beta-nyc.herokuapp.com/events"
+			%li
+				=link_to "Browse members' projects", "http://beta-nyc.herokuapp.com/projects"
+			%li
+				=link_to "Add your own project", "http://beta-nyc.herokuapp.com/projects/new"
+		%p If you have any questions don't hesitate to reach out to us. You can just reply to this email!
+		%p Thanks for joining, we look forward to building alongside you!
+		%p Your captains, Noel and Ashley
+			
