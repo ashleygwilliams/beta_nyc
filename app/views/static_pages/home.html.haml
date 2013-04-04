@@ -16,8 +16,12 @@
 %section
   .row-fluid
     .spotlight.column.span4
-      %h1 view user projects
+      %h1 brigade projects
+      = render @projects
+      = link_to "see more", projects_path
     .events.column.span4
       %h1 upcoming events
+      = render @events
+      = link_to "see more", events_path
     .contact.column.span4
       %h1 keep in touch
