@@ -33,6 +33,13 @@ $hugespace: 40px;
   font-size: 300%;
   display: inline-block;
   margin-top: $largespace;
+  &:hover{
+    background: none;
+    color: $CFAblue;
+  }
+  &:visited{
+    color: $BBdarkblue;
+  }
 }
 
 .maininner {
@@ -52,11 +59,6 @@ $hugespace: 40px;
 .logo {
   background: $BBdarkblue;
   padding-bottom: $largespace;
-}
-
-.column {
-  background: white;
-  margin-bottom: $largespace;
 }
 
 .columnheader {
@@ -93,6 +95,21 @@ $hugespace: 40px;
   &:hover{
     background: $CFAred;
     color: $CFAblue;
+    text-decoration: none;
+  }
+  &:visited {
+    color: white;
+  }
+}
+
+.btn-red {
+  color: white;
+  background: $CFAred;
+  border-radius: 5px;
+  padding: $mediumspace $largespace;
+  &:hover{
+    background: $CFAblue;
+    color: white;
     text-decoration: none;
   }
   &:visited {
@@ -158,6 +175,21 @@ body {
 .highlight {
   color: white;
   font-size: 150%;
+}
+
+.unit-title {
+  font-family: "Arvo";
+  font-size: 150%;
+  font-weight: 400;
+  color: $CFAblue;
+  &:visited {
+    color: $CFAgrey;
+  }
+  &:hover {
+    background: none;
+    color: $CFAred;
+    text-decoration: none;
+  }
 }
 
 #error_explanation {

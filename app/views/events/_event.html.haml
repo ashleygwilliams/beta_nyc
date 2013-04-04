@@ -11,5 +11,6 @@
   %br/
   %span.when #{event.when}
   %span.location #{event.location}
-  = link_to "RSVP on Meetup.com", event.meetup_url, {:target=>"_blank", :class=>"btn"}
+  %br/
+  = link_to "RSVP on Meetup.com", event.meetup_url, {:target=>"_blank", :class=>"btn-red"}
   %p #{event.description}

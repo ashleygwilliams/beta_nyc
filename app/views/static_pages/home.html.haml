@@ -20,14 +20,16 @@
     .column.span6
       .columnheader.blue
         %h1 brigade projects
-      .columninner  
+      .maininner  
         %ul
-          = render @projects
-        = link_to "see more", projects_path, {:class=>"pull-right"}
+          -if @projects.any?
+            = render @projects
+        = link_to "see more", projects_path, {:class=>"pull-right btn-white"}
     .column.span6
       .columnheader.grey
         %h1 upcoming events
-      .columninner
+      .maininner
         %ul
-          = render @events
-        = link_to "see more", events_path, {:class=>"pull-right"}
+          -if @events.any?
+            = render @events
+        = link_to "see more", events_path, {:class=>"pull-right btn-white"}
