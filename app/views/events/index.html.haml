@@ -1,9 +1,9 @@
-.main
+.main.events
   =image_tag "prezdebate.jpg"
-.main
-  %h1 Beta NYC Events
+  .explain
+    %h1 Beta NYC Events
 
-  = will_paginate
-  %ul.events
-    = render @events
-  = will_paginate
+    = will_paginate
+    %ul.events
+      = render @events
+    = will_paginate

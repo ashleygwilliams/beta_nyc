@@ -18,11 +18,16 @@ $hugespace: 40px;
 
 .explain {
   padding: $largespace;
+  li {
+    list-style-type: none;
+    font-size: 40px;
+    line-height: 1.5em;
+  }
 }
 
-.explain > h1 {
-  font-size: 80px;
-  font-weight: 900;
+.explain > h2 {
+  font-size: 36px;
+  font-family: "Lato";
 }
 
 .logo {
@@ -35,30 +40,37 @@ h2 {
   font-weight: 900;
 }
 
-li {
-  list-style-type: none;
-  font-size: 40px;
-  line-height: 1.5em;
-}
+
 
 .column {
   background: white;
   border: $largespace $CFAgrey solid;
   margin-top: $largespace;
   padding: $largespace;
-  &.spotlight {
-    border-color: $CFAred;
-    & span {
-      font-weight: 900;
-    }
-  }
-  &.contact {
-    border-color: $CFAblue;
-  }
+}
+
+.projects {
+  border-color: $CFAred;
+}
+
+.events {
+  border-color: $CFAblue;
+}
+
+.projects, .events {
   h1 {
     font-family: "Ostrich sans";
   }
+  li {
+    list-style-type: none;
+    .unit-title {
+      font-family: 'Lato';
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
 }
+
 
 .navbar .nav,
 .navbar .nav > li {

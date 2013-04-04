@@ -1,8 +1,8 @@
 %hr
 %li
-  = link_to project.name, project
+  = link_to project.name, project, {:class=>"unit-title"}
   -if current_user?(project.user)
-    .options
+    %span.options
       =link_to "delete", project, method: :delete,
                                 data: { confirm: "Are you sure?" },
                                 title: project.name
