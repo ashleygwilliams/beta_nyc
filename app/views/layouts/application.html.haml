@@ -9,8 +9,11 @@
   %body
     .container-fluid
       %header
-        = render "shared/social"
-        = render "shared/session"
+        .name.pull-left
+          = link_to "betaNYC", root_path
+        .controls
+          = render "shared/social"
+          = render "shared/session"
       =render "shared/nav"
       - flash.each do |key, value|
         = content_tag(:div, value, class: "alert alert-#{key}")

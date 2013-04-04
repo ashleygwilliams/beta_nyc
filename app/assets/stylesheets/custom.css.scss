@@ -45,8 +45,8 @@ h2 {
 .column {
   background: white;
   border: $largespace $CFAgrey solid;
-  margin-top: $largespace;
   padding: $largespace;
+  margin-bottom: $largespace;
 }
 
 .projects {
@@ -104,6 +104,7 @@ body {
 .main {
   background: white;
   border: $largespace $CFAgrey solid;
+  margin-bottom: $largespace;
   font-family: "Ostrich Sans";
   font-size: 30px;
   ul > li {

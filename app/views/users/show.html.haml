@@ -1,10 +1,10 @@
-.main.row-fluid
-  %aside.span4
+.row-fluid
+  %aside.main.explain.span4
     = gravatar_for @user
     %h1 #{@user.name}
-    %h4 #{@user.email}
-    %h4 #{@user.githandle}
-    %h4 #{@user.cellphone}
+    %h3 #{@user.email}
+    %h3 #{@user.githandle}
+    %h3 #{@user.cellphone}
     -if current_user?(@user)
       = link_to 'Edit My Profile', edit_user_path(@user), {:class => "btn"} 
     %section
@@ -13,12 +13,12 @@
       -if current_user?(@user) && current_user.admin?
         = link_to "Create a New Event", new_event_path, {:class=>"btn btn-primary"}
   .span8
-    %section.events
+    %section.column.events
       -if @user.events.any?
         %h3 Events (#{@user.events.count})
         %ol.events
           = render @events
-    %section.projects
+    %section.column.projects
       -if @user.projects.any?
         %h3 Projects (#{@user.projects.count})
         %ol.projects
