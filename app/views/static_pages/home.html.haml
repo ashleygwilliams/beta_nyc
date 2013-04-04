@@ -17,9 +17,11 @@
   .row-fluid
     .projects.column.span6
       %h1 brigade projects
-      = render @projects
+      %ul
+        = render @projects
       = link_to "see more", projects_path
     .events.column.span6
       %h1 upcoming events
-      = render @events
+        %ul
+          = render @events
       = link_to "see more", events_path
