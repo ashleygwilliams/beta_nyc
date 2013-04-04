@@ -1,27 +1,33 @@
-.main
+.main.red
   .row-fluid
     .logo.span4
       =image_tag "beta.png"
       %h1 betaNYC
-    .explain.span8
-      %h2 betaNYC cares about open gov
+    .heroinner.span8
+      %h2.aphorism
+        %span THE 
+        %span.highlight ENGINEERING CLASS
+        %span WILL
+        %span NOT
+        %span.highlight SPONTANEOUSLY 
+        %span BECOME
+        %span.highlight POLITICAL
       %hr
-      %ul
-        %li we <strong>code</strong> about it
-        %li we <strong>write</strong> about it
-        %li we <strong>get together and talk</strong> about it
-      %hr
-      %h2 you should #{link_to "join us", volunteer_path}
+      %h2.action you should #{link_to "join us", volunteer_path, {:class=>"btn-white"}}
 
 %section
   .row-fluid
-    .projects.column.span6
-      %h1 brigade projects
-      %ul
-        = render @projects
-      = link_to "see more", projects_path
-    .events.column.span6
-      %h1 upcoming events
-      %ul
-        = render @events
-      = link_to "see more", events_path
+    .column.span6
+      .columnheader.blue
+        %h1 brigade projects
+      .columninner  
+        %ul
+          = render @projects
+        = link_to "see more", projects_path, {:class=>"pull-right"}
+    .column.span6
+      .columnheader.grey
+        %h1 upcoming events
+      .columninner
+        %ul
+          = render @events
+        = link_to "see more", events_path, {:class=>"pull-right"}

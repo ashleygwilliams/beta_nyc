@@ -1,8 +1,9 @@
 .main
-  .row-fluid
-    .span6.explain
-      %h1 WE WANT YOU
-      = image_tag("logo.png", :class=>"pull-left")
-      %p This is our time. What else is there to guide us? We seek a new way forward, based on mutual interest and mutual respect. While we breathe, we will hope. This is our time. We can do that. America, this is our moment. For that is the true genius of America - that America can change.
-    .span6.explain
-      = render :partial => 'users/form'
+  .maininner
+    .row-fluid
+      .span6
+        %h1 WE WANT YOU
+        = image_tag("logo.png", :class=>"pull-left")
+        %p This is our time. What else is there to guide us? We seek a new way forward, based on mutual interest and mutual respect. While we breathe, we will hope. This is our time. We can do that. America, this is our moment. For that is the true genius of America - that America can change.
+      .span6
+        = render :partial => 'users/form'

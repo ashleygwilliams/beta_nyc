@@ -1,8 +1,8 @@
-.main.events
-  =image_tag "prezdebate.jpg"
-  .explain
+.main
+  .mainheader
+    =link_to "View Events on Meetup.com", "http://www.meetup.com/openny/", {:class=>"btn-blue pull-right"}
     %h1 Beta NYC Events
-
+  .maininner
     = will_paginate
     %ul.events
       = render @events
