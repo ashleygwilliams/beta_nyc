@@ -15,21 +15,20 @@
       %hr
       %h2.action you should #{link_to "join us", volunteer_path, {:class=>"btn-white"}}
 
-%section
-  .row-fluid
-    .column.span6
-      .columnheader.blue
-        %h1 brigade projects
-      .maininner  
-        %ul
-          -if @projects
-            = render @projects
-        = link_to "see more", projects_path, {:class=>"pull-right btn-white"}
-    .column.span6
-      .columnheader.grey
-        %h1 upcoming events
-      .maininner
-        %ul
-          -if @events
-            = render @events
-        = link_to "see more", events_path, {:class=>"pull-right btn-white"}
+.row-fluid
+  .main.span6
+    .mainheader.blue
+      %h2 brigade projects
+    .maininner  
+      %ul
+        -if @projects
+          = render @projects
+      = link_to "see more", projects_path, {:class=>"pull-right btn-white"}
+  .main.span6
+    .mainheader.grey
+      %h2 upcoming events
+    .maininner
+      %ul
+        -if @events
+          = render @events
+      = link_to "see more", events_path, {:class=>"pull-right btn-white"}

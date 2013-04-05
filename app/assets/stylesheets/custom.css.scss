@@ -12,6 +12,38 @@ $mediumspace: 10px;
 $largespace: 20px;
 $hugespace: 40px;
 
+@mixin grey_box_shadow {
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 3px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 3px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.rsvp {
+  font-family: "Arvo";
+  float: left;
+  text-align: center;
+  margin-right: $mediumspace;
+  .btn-red {
+    display: block;
+  }
+}
+
+.date {
+  background: $BBdarkblue;
+  color: white;
+  padding: $largespace;
+  text-align: center;
+}
+
+.day {
+  font-size: 300%;
+  font-weight: 700;
+}
+
+.month {
+  font-size: 200%;
+}
+
 .logo > h1 {
   margin-left: -9999px;
   margin-top: -50px;
@@ -52,7 +84,7 @@ $hugespace: 40px;
 }
 
 .mainheader {
-  padding: $largespace;
+  padding: $smallspace $mediumspace;
   background: white;
 }
 
@@ -61,15 +93,17 @@ $hugespace: 40px;
   padding-bottom: $largespace;
 }
 
-.columnheader {
-  padding: $mediumspace;
-}
-
 .columninner {
   padding: 0 $mediumspace $mediumspace $mediumspace;
-  li {
-    list-style: none;
-  }
+}
+
+ul {
+  margin: -$smallspace;
+}
+
+li {
+  padding: $largespace;
+  list-style: none;
 }
 
 .btn-white {
@@ -77,6 +111,7 @@ $hugespace: 40px;
   background: white;
   border-radius: 5px;
   padding: $mediumspace $largespace;
+  margin-bottom: $mediumspace;
   &:hover{
     background: $CFAblue;
     color: white;
@@ -92,6 +127,7 @@ $hugespace: 40px;
   background: $CFAblue;
   border-radius: 5px;
   padding: $mediumspace $largespace;
+  margin-bottom: $mediumspace;
   &:hover{
     background: $CFAred;
     color: $CFAblue;
@@ -154,13 +190,14 @@ body {
 }
 
 .main {
+  @include grey_box_shadow;
   margin-bottom: $largespace;
   font-family: "Arvo";
+  background: white;
 }
 
 .blue {
   background: $CFAblue;
-  color: $CFAred;
 }
 
 .red {
@@ -180,7 +217,7 @@ body {
 .unit-title {
   font-family: "Arvo";
   font-size: 150%;
-  font-weight: 400;
+  font-weight: 700;
   color: $CFAblue;
   &:visited {
     color: $CFAgrey;

@@ -1,25 +1,30 @@
 .row-fluid
-  %aside.main.explain.span4
-    = gravatar_for @user
-    %h1 #{@user.name}
-    %h3 #{@user.email}
-    %h3 #{@user.githandle}
-    %h3 #{@user.cellphone}
-    -if current_user?(@user)
-      = link_to 'Edit My Profile', edit_user_path(@user), {:class => "btn"} 
-    %section
+  %aside.main.span4
+    .maininner
+      = gravatar_for @user
+      %h1 #{@user.name}
+      %h3 #{@user.email}
+      %h3 #{@user.githandle}
+      %h3 #{@user.cellphone}
       -if current_user?(@user)
-        = link_to "Create a New Project", new_project_path, {:class=>"btn btn-primary"}
-      -if current_user?(@user) && current_user.admin?
-        = link_to "Create a New Event", new_event_path, {:class=>"btn btn-primary"}
+        = link_to 'Edit My Profile', edit_user_path(@user), {:class => "btn"} 
+      %section
+        -if current_user?(@user)
+          = link_to "Create a New Project", new_project_path, {:class=>"btn btn-primary"}
+        -if current_user?(@user) && current_user.admin?
+          = link_to "Create a New Event", new_event_path, {:class=>"btn btn-primary"}
   .span8
-    %section.column.events
-      -if @user.events.any?
-        %h3 Events (#{@user.events.count})
-        %ol.events
-          = render @events
-    %section.column.projects
-      -if @user.projects.any?
-        %h3 Projects (#{@user.projects.count})
-        %ol.projects
-          = render @projects
+    -if @user.events.any?
+      %section.main
+        .mainheader.grey
+          %h3 Events (#{@user.events.count})
+        .maininner
+          %ul
+            = render @events
+    -if @user.projects.any?
+      %section.main
+        .mainheader.blue
+          %h3 Projects (#{@user.projects.count})
+        .maininner
+          %ul
+            = render @projects

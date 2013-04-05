@@ -1,20 +1,25 @@
 .main
-  %h1
-    = link_to @event.name, @event
-  -if current_user?(@user)
-    .options
-      =link_to "delete", @event, method: :delete,
-                                data: { confirm: "Are you sure?" },
-                                title: @event.name
-      |
-      =link_to "edit", edit_event_path(@event)
-  = link_to "RSVP on Meetup.com", @event.meetup_url, {:target=>"_blank", :class=>"btn-red"}
-  %p Location: #{@event.location}
-  %p #{@event.when}
+  .maininner
+    %h1
+      = link_to @event.name, @event
+    .rsvp 
+      .date
+        %span.day #{@event.when.strftime('%d')}
+        %br/
+        %span.month #{@event.when.strftime('%B')}
+      = link_to "RSVP", @event.meetup_url, {:target=>"_blank", :class=>"btn-red"}
+      -if current_user?(@event.user)
+        %span.options
+          =link_to "delete", @event, method: :delete,
+                                      data: { confirm: "Are you sure?" },
+                                      title: @event.name
+          |
+          =link_to "edit", edit_event_path(@event)
+    %p #{@event.when.strftime('%H:%M')}
+    %p Location: #{@event.location}
+    %p
+      Contact:
+      = link_to @user.name, @user
 
-  %p
-    Contact:
-    = link_to @user.name, @user
-
-  %p #{@event.description}
+    %p #{@event.description}
 

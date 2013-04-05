@@ -1,15 +1,16 @@
-.main.projects
-  %h1
-    = link_to @project.name, @project
-  -if current_user?(@user)
-    .options
-      =link_to "delete", @project, method: :delete,
-                                data: { confirm: "Are you sure?" },
-                                title: @project.name
-      |
-      =link_to "edit", edit_project_path(@project)
-  %a{:href=>"#{@project.url}"} website
-  %p #{@project.description}
-  %p Contact
-  = gravatar_for @user
-  = link_to @user.name, @user, {:class=>"user"}
+.main
+  .maininner
+    %h1
+      = link_to @project.name, @project
+    -if current_user?(@user)
+      .options
+        =link_to "delete", @project, method: :delete,
+                                      data: { confirm: "Are you sure?" },
+                                      title: @project.name
+        |
+        =link_to "edit", edit_project_path(@project)
+    %a{:href=>"#{@project.url}"} website
+    %p #{@project.description}
+    %p Contact
+    = gravatar_for @user
+    = link_to @user.name, @user, {:class=>"user"}
