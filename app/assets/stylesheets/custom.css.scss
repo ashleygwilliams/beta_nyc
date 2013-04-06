@@ -79,15 +79,6 @@ $hugespace: 40px;
   font-weight: 700;
 }
 
-.logo {
-  background: $BBdarkblue;
-  padding-bottom: $mediumspace;
-  padding-right: $smallspace;
-  padding-top: $smallspace;
-  padding-left: $mediumspace;
-  margin-right: $mediumspace;
-}
-
 .name {
   font-size: 300%;
   display: inline-block;
@@ -98,6 +89,12 @@ $hugespace: 40px;
   &:visited{
     color: $BBdarkblue;
   }
+}
+
+.logo {
+  margin-right: $mediumspace;
+  display: inline-block;
+  float: left;
 }
 
 .maininner {
