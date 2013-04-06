@@ -4,17 +4,19 @@
     %title beta NYC
     %link{:href=>'http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic', :rel=>'stylesheet', :type=>'text/css'}
     = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
+    = javascript_include_tag "application", "bootstrap"
     = csrf_meta_tags
   %body
     .container-fluid
       %header
         .name.pull-left
-          = link_to "betaNYC", root_path
+          =image_tag "beta.png", {:class=>"logo span1"}
+          %h1.pull-left betaNYC
         .controls
           = render "shared/social"
           = render "shared/session"
-      =render "shared/nav"
+      %nav
+        =render "shared/nav"
       - flash.each do |key, value|
         = content_tag(:div, value, class: "alert alert-#{key}")
       =yield

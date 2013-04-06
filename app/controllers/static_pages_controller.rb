@@ -6,16 +6,4 @@ class StaticPagesController < ApplicationController
 
   def about
   end
-
-  def mission
-  end
-
-  def projects
-  end
-
-  def events
-  end
-
-  def volunteer
-  end
 end

@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "bootstrap-responsive";
 
 $CFAred: #cf1b41;
 $CFAblue: #399fd3;
@@ -28,11 +29,33 @@ $hugespace: 40px;
   }
 }
 
+.info {
+  margin-top: $mediumspace;
+  margin-bottom: $mediumspace;
+}
+
+.imgdiv {
+  background: image-url("cityhall.jpg");
+  background-size: cover;
+  height: 400px;
+}
+
 .date {
   background: $BBdarkblue;
   color: white;
   padding: $largespace;
   text-align: center;
+}
+
+.time {
+  font-family: "Arvo";
+  font-weight: 700;
+  color: $BBdarkblue;
+  font-size: 120%;
+}
+
+.partner {
+  margin: $mediumspace;
 }
 
 .day {
@@ -42,11 +65,6 @@ $hugespace: 40px;
 
 .month {
   font-size: 200%;
-}
-
-.logo > h1 {
-  margin-left: -9999px;
-  margin-top: -50px;
 }
 
 .aphorism {
@@ -61,10 +79,18 @@ $hugespace: 40px;
   font-weight: 700;
 }
 
+.logo {
+  background: $BBdarkblue;
+  padding-bottom: $mediumspace;
+  padding-right: $smallspace;
+  padding-top: $smallspace;
+  padding-left: $mediumspace;
+  margin-right: $mediumspace;
+}
+
 .name {
   font-size: 300%;
   display: inline-block;
-  margin-top: $largespace;
   &:hover{
     background: none;
     color: $CFAblue;
@@ -86,11 +112,6 @@ $hugespace: 40px;
 .mainheader {
   padding: $smallspace $mediumspace;
   background: white;
-}
-
-.logo {
-  background: $BBdarkblue;
-  padding-bottom: $largespace;
 }
 
 .columninner {
@@ -198,6 +219,7 @@ body {
 
 .blue {
   background: $CFAblue;
+  color: white;
 }
 
 .red {
@@ -207,6 +229,7 @@ body {
 
 .grey {
   background: $CFAgrey;
+  color: white;
 }
 
 .highlight {

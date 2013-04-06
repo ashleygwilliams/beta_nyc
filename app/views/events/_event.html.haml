@@ -13,7 +13,8 @@
                                   title: event.name
         |
         =link_to "edit", edit_event_path(event)
-  = link_to event.name, event, {:class=>"unit-title"}
-  %p #{event.when.strftime('%H:%M')}
-  %p Location: #{event.location}
-  %p #{event.description}
+  .info
+    = link_to event.name, event, {:class=>"unit-title"}
+    %p.time #{event.when.strftime('%H:%M')}
+    %p Location: #{event.location}
+    %p #{event.description}
