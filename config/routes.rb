@@ -8,7 +8,7 @@ BetaNyc::Application.routes.draw do
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
-  root to: 'static_pages#home'
+  root to: 'static_pages#home' 
 
   match "about" => "static_pages#about"
   match "mission" => "static_pages#mission"
